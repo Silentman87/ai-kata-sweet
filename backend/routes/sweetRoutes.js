@@ -8,7 +8,9 @@ const {
   deleteSweet,
   purchaseSweet,
   restockSweet
-} = require('../controllers/sweetController');
+} = require('../controller/sweetController');
+
+const { protect, admin } = require('../middleware/errorhandler');
 
 router.post('/', protect, admin, addSweet);
 router.get('/', protect, getSweets);
