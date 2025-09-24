@@ -1,4 +1,8 @@
-./vscode
-backend/.env
-backend/node_modules
+# VSCode settings folder
+.vscode/
 
+# Backend environment file
+backend/.env
+
+# Node modules
+backend/node_modules/
