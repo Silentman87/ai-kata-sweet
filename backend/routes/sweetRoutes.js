@@ -10,13 +10,13 @@ const {
   restockSweet
 } = require('../controllers/sweetController');
 
-router.post('/', addSweet);
-router.get('/',  getSweets);
-router.get('/search', searchSweets);
-router.put('/:id', updateSweet);
-router.delete('/:id', deleteSweet);
+router.post('/', protect, admin, addSweet);
+router.get('/', protect, getSweets);
+router.get('/search', protect, searchSweets);
+router.put('/:id', protect, admin, updateSweet);
+router.delete('/:id', protect, admin, deleteSweet);
 
-router.post('/:id/purchase', purchaseSweet);
-router.post('/:id/restock',  restockSweet);
+router.post('/:id/purchase', protect, purchaseSweet);
+router.post('/:id/restock', protect, admin, restockSweet);
 
 module.exports = router;
