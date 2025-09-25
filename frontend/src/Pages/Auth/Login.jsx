@@ -1,6 +1,7 @@
 import React ,{ useState} from 'react'
 import { Link , useNavigate} from 'react-router-dom'
 import axios from 'axios'
+import { useAuth } from '../../context/authContext';
 import { toast } from 'react-toastify'
 import {Eye , EyeOff }from 'lucide-react'
 
@@ -9,6 +10,7 @@ const Login = () => {
      const navigate = useNavigate();
         const [error , setError] = useState('');
         const [loading , setLoading] = useState(false);
+        const { loginUser } = useAuth();
 
        const [userdt , setUserdt] = useState({
         email : '',
@@ -28,9 +30,11 @@ const Login = () => {
             const logindt = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, userdt);
                   localStorage.setItem("utoken", logindt.data.token);
                     toast.success("Login successful!");
+                      loginUser(logindt.data);
                     navigate('/home');
-              
+                  
             }
+            
             catch(error)
             {
                console.log("error in handlesubmit in login page: ",error)
