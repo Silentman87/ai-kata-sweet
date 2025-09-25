@@ -1,8 +1,38 @@
-# VSCode settings folder
-.vscode/
-
-# Backend environment file
-backend/.env
-
-# Node modules
+# Node modules (both backend & frontend)
 backend/node_modules/
+frontend/node_modules/
+
+
+
+# Build outputs
+backend/dist/
+backend/build/
+frontend/dist/
+frontend/build/
+
+# Logs
+backend/logs/
+frontend/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+backend/.env
+frontend/.env
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Coverage / testing
+coverage/
+*.lcov
+
+# Cache
+backend/.cache/
+frontend/.cache/
