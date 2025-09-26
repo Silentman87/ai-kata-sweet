@@ -88,20 +88,21 @@ export default function AdminDashboard() {
         <main className="flex-grow container mx-auto p-6">
 
           {/* Add Sweet Form */}
-          <div className="mb-6 bg-white p-4 rounded-lg shadow flex flex-wrap gap-3 items-center">
+          <h2 className='text-black font-bold p-4'>Add Sweet Form</h2>
+          <div className="mb-10 bg-indigo-100 p-10 rounded-lg shadow flex flex-wrap gap-3 items-center">
             <input
               name="name"
               placeholder="Name"
               value={form.name}
               onChange={handleChange}
-              className="border border-gray-300 p-2 rounded flex-grow focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border border-gray-300 p-2 rounded flex-grow focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
             />
             <input
               name="category"
               placeholder="Category"
               value={form.category}
               onChange={handleChange}
-              className="border border-gray-300 p-2 rounded flex-grow focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border border-gray-300 p-2 rounded flex-grow focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
             />
             <input
               name="price"
@@ -109,7 +110,7 @@ export default function AdminDashboard() {
               placeholder="Price"
               value={form.price}
               onChange={handleChange}
-              className="border border-gray-300 p-2 rounded w-24 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border border-gray-300 p-2 rounded w-24 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
             />
             <input
               name="quantity"
@@ -117,7 +118,7 @@ export default function AdminDashboard() {
               placeholder="Quantity"
               value={form.quantity}
               onChange={handleChange}
-              className="border border-gray-300 p-2 rounded w-24 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border border-gray-300 p-2 rounded w-24 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
             />
             <button
               onClick={handleAdd}
